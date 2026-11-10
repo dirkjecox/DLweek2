@@ -18,9 +18,9 @@ from sklearn import datasets
 # Copy and paste the code for that function here:
 # -----------------------------------------------
 def my_mlp(w, X, sigma=np.tanh):
-    W1 = w[0:24].reshape((4, 6), order='F')
-    W2 = w[24:52].reshape((7, 4), order='F')
-    W3 = w[52:59].reshape((1, 7), order='F')
+    W1 = w[0:24].reshape((4, 6))
+    W2 = w[24:52].reshape((7, 4))
+    W3 = w[52:59].reshape((1, 7))
 
     a1 = sigma(W1 @ X)
     a2 = sigma(W2 @ a1)
